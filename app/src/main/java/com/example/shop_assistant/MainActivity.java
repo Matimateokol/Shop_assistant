@@ -1,5 +1,6 @@
 package com.example.shop_assistant;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
                 Intent intent = new Intent(MainActivity.this, BarcodeScanningActivity.class);
                 startActivity(intent);
+                //Intent intent = new Intent(MainActivity.this, ProductInfoActivity.class);
+                //startActivity(intent);
             }
         });
     }

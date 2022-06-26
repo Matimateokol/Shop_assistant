@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.shop_assistant">
 
-    <uses-sdk tools:overrideLibrary="
-      androidx.camera.camera2, androidx.camera.core,
-      androidx.camera.view, androidx.camera.lifecycle" />
+    <uses-sdk tools:overrideLibrary="       androidx.camera.camera2, androidx.camera.core,       androidx.camera.view, androidx.camera.lifecycle" />
 
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,6 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Shop_assistant">
+        <activity
+            android:name=".ProductInfoActivity"
+            android:exported="false" />
         <activity
             android:name=".BarcodeScanningActivity"
             android:exported="false" />

@@ -6,14 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".BarcodeScanningActivity">
 
-
     <!-- PreviewView will display live camera feed -->
     <androidx.camera.view.PreviewView
         android:id="@+id/previewView"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintBottom_toTopOf="@+id/bottomText"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent" >
+    </androidx.camera.view.PreviewView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/bottomText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_search" />
 
     <!-- We'll use this textView to display the decoded barcode value -->
 <TextView
