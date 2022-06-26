@@ -202,53 +202,6 @@ public class BarcodeScanningActivity extends AppCompatActivity {
 
     }
 
-    /*
-    // function decodes raw values from scanned barcodes
-    // and sets them instantly to bottomTextView in BarcodeScanningActivity layout
-    private void processImageProxy(BarcodeScanner barcodeScanner, ImageProxy imageProxy) {
-        @SuppressLint("UnsafeOptInUsageError") Image image = imageProxy.getImage();
-
-        // defining intent for passing data to ProductInfoActivity
-        Intent intent = new Intent(BarcodeScanningActivity.this, ProductInfoActivity.class);
-
-        if (image != null) {
-            InputImage inputImage =
-                    InputImage.fromMediaImage(image, imageProxy.getImageInfo().getRotationDegrees());
-
-            Task<List<Barcode>> task = barcodeScanner.process(inputImage);
-
-            task.addOnCompleteListener(task1 -> {
-                if (task1.isSuccessful()) {
-                    // Task completed successfully
-                    Barcode barcode = task1.getResult().get(0);
-                    imageProxy.close();
-                    image.close();
-                    //barcodeScanner.close();
-
-                    // Our decoded barcode raw value -> You can pass it to API:
-                    String rawValue = barcode.getRawValue();
-
-                    // Update our textView to show the decoded value
-                    binding.bottomText.setText(rawValue);
-
-                    // pass the data to ProductInfoActivity
-                    if(rawValue != "" && rawValue != null) intent.putExtra("barcode", rawValue);
-
-                } else {
-                    // Task failed with an exception
-                    Log.e(Objects.requireNonNull(task1.getException()).getLocalizedMessage(), task1.getException().getMessage());
-                }
-            });
-        }
-        // those two lines of code are very important --- remember to .close() image and imageProxy
-        // otherwise app crashes or camera doesn't scan barcodes
-        //image.close();
-        //imageProxy.close();
-
-        if (binding.bottomText.getText() != "") startActivity(intent);
-    }
-    */
-
     private void processImageProxy(BarcodeScanner barcodeScanner, ImageProxy imageProxy) {
         @SuppressLint("UnsafeOptInUsageError") Image image = imageProxy.getImage();
 

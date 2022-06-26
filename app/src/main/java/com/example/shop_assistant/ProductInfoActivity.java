@@ -50,8 +50,9 @@ public class ProductInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String str = intent.getStringExtra("barcode");
 
+        // "5900379137176"
         // getting data from the specific document ID under products collection
-        db.collection("products").document("5900379137176")
+        db.collection("products").document(str)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
