@@ -44,7 +44,7 @@
         android:id="@+id/productNameLabelView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Product name:"
+        android:text="Product name :"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/productNameView"
         app:layout_constraintEnd_toEndOf="parent"
