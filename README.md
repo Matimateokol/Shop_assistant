@@ -8,3 +8,10 @@ Firestore database schema:
 The product Id or no is a product barcode.
 
 Some screenshots:
+![image](/images/welcome_view.jpg)
+
+![image](/images/before_scanning.jpg)
+
+![image](/images/after_scanning.jpg)
+
+![image](/images/scanned.jpg)
