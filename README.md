@@ -6,3 +6,5 @@ Firestore database schema:
 ![image](https://user-images.githubusercontent.com/58779750/176358928-d95e075c-de0b-4229-9fea-10676d5e6fb0.png)
 
 The product Id or no is a product barcode.
+
+Some screenshots:
